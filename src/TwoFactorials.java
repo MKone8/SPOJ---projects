@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class TwoFactorials {
     public static void main(String[]args){
         Scanner scanner = new Scanner(System.in);
-
+        
         int amountOfAttempts = scanner.nextInt();
         int [] savedValues = new int[amountOfAttempts];
         for(int i = 0; i <amountOfAttempts; i++){
@@ -13,28 +13,26 @@ public class TwoFactorials {
         for(int i = 0; i < amountOfAttempts;i++){
         int factorial = savedValues[i];
         int wynik = savedValues[i];
+        if (wynik<=1){
+            System.out.println(0+" "+1);
+        }else if(wynik>1 && wynik <=9)
+        {
 
         for(int j = 1;j<factorial;j++){
             
             wynik *= factorial-j;
-            
+    
         }
-        int numOfDigits;
-        int numOfTens;
+        int numOfDigits = (int) wynik % 10;      
+        int numOfTens = (int) Math.floor((wynik % 100) / 10);
+        
+        System.out.print(numOfTens+" "+numOfDigits);
+        System.out.println();
+        }else{
+            System.out.println(0+" "+0);
+        }
+    }
 
-        if(wynik<10){
-            numOfDigits = wynik;
-            System.out.println(0 +" "+numOfDigits);
-        }
-        // String newWynik = Integer.toString(wynik);
-        // char numOfDigits = newWynik.charAt(newWynik.length()-1);
-         
-        //    if(newWynik.length()<2){
-        //     System.out.println(0+" "+numOfDigits);
-        //    }else{
-        //     char numOfTens = newWynik.charAt(newWynik.length()-2);
-        //     System.out.print(numOfTens+" "+numOfDigits);
-        //     System.out.println();
-        //    }
-        // }
-}}}
+
+
+}}
