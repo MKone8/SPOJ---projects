@@ -19,8 +19,7 @@ public class Kindergarten {
             int wynik = 1;
             while((double)wynik/higher!=(int)wynik/higher){
 
-                wynik = lower * Math.round(mnoznik);      
-                // System.out.println(wynik);
+                wynik = lower * Math.round(mnoznik);      ;
                 mnoznik++;
             }
             System.out.println(wynik);
@@ -34,17 +33,12 @@ public class Kindergarten {
             while((double)wynik/higher!=(int)wynik/higher){
                 
                 wynik = lower * Math.round(mnoznik);          
-                // System.out.println(wynik);
                 mnoznik++;
             }
             System.out.println(wynik);
         }
             
-            // while(lower/higher==(int)lower/higher){
-            //     System.out.println("wykonałem się?");
-            //     lower *= mnoznik;
-            //     mnoznik++;
-            // }
+
         }
         
 
