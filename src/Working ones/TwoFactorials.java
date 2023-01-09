@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class TwoFactorials {
+    // Wypisz dziesiątki i jedności wyniku silni
+    // Get tens and digitals of factorial result
+    
     public static void main(String[]args){
         Scanner scanner = new Scanner(System.in);
         
@@ -31,6 +34,7 @@ public class TwoFactorials {
         }else{
             System.out.println(0+" "+0);
         }
+        scanner.close();
     }
 
 

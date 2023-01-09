@@ -1,12 +1,14 @@
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
 public class SimpleAdding {
+    // Write how many numbers you want to add, then write numbers, then add them all.
+    // Wpisz ile chcesz zsumować liczb, wypisz je a następnie zsumuj.
+    
     public static void main(String[]args){
         Scanner scanner = new Scanner(System.in);
         int amountOfAttempts = scanner.nextInt();

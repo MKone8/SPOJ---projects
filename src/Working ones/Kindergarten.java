@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Kindergarten {
     public static void main(String[]args){
+
+        // 
         Scanner scanner = new Scanner(System.in);
         int amountOfAttempts = scanner.nextInt();
         int[]a = new int[amountOfAttempts];
@@ -19,7 +21,7 @@ public class Kindergarten {
             int wynik = 1;
             while((double)wynik/higher!=(int)wynik/higher){
 
-                wynik = lower * Math.round(mnoznik);      ;
+                wynik = lower * Math.round(mnoznik);
                 mnoznik++;
             }
             System.out.println(wynik);
@@ -37,7 +39,7 @@ public class Kindergarten {
             }
             System.out.println(wynik);
         }
-            
+            scanner.close();
 
         }
         

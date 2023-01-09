@@ -3,6 +3,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class PrimeNumbers {
+
+    // Sprawdź, które spośród danych liczb są liczbami pierwszymi
+    // Check which ones are PrimaryNumbers
     public static void main(String[] args) throws Exception {
         
         Scanner scanner = new Scanner(System.in);
