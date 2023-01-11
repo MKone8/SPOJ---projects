@@ -1,5 +1,6 @@
 package ActuallyInProgress;
 
+import java.rmi.StubNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,32 +9,52 @@ import java.util.Scanner;
 
 public class SweetTeether {
     public static void main(String []args){
-        // Liczba ciastek w jednym pudełku 10
-        // 60 minut jedno ciastko w dobe zje 24
-        // 30 minut zje łącznie 48 ciastek
-        // razem zjedzą 72 modulo 10, jeśli nie to ++;
         Scanner scanner = new Scanner(System.in);
-        Map<Integer,Integer>tempoOfMember = new HashMap<>();
-        List<Integer>amountOfMembers = new ArrayList<>();
-        List<Integer>cookiesInPack = new ArrayList<>();
+        List<Integer>members = new ArrayList<>();
+        List<Integer>results = new ArrayList<>();
         int amountOfAttempts = scanner.nextInt();
-        
-        // int i=0;
+        int amountOfSeconds = 86400;
+        // int test = 43/5;
+        // System.out.println(test);
         for(int i = 0; i<amountOfAttempts;i++){
-            System.out.println("Wpisuję kolejnego zawodnika: ");
-            amountOfMembers.add(scanner.nextInt());
-            cookiesInPack.add(scanner.nextInt());
-        while(tempoOfMember.size()!=amountOfMembers.get(0)){
-            System.out.println("wypisuję liczbę zawodników: "+amountOfMembers.get(0));
-            tempoOfMember.put(i,scanner.nextInt());
-            System.out.println("przypisuję tempo zawodnika numer:"+i+" "+tempoOfMember);         
-        }
-        }
-        // int amountOfAttempts = scanner.nextInt();
-
-        // for(int i = 0; i<amountOfAttempts;i++){
-        //     amountOfMembers.add(scanner.nextInt());
-
-        // }
+            int amountOfMembers = scanner.nextInt();
+            int cookiesInPack = scanner.nextInt();
+            int wynik=0;
+            int ilePaczek=0;
+            while(members.size()!=amountOfMembers){
+                members.add(scanner.nextInt());
+            }
+            for(int j=0;j<members.size();j++){
+                wynik += (amountOfSeconds / members.get(j));
+                
+            }
+            if(wynik%cookiesInPack==0){
+                // wynik = wynik/cookiesInPack;
+                ilePaczek = wynik/cookiesInPack;
+            }
+            else if(wynik>cookiesInPack){
+                // wynik=(wynik/cookiesInPack)+1;
+                ilePaczek=(wynik/cookiesInPack)+1;
+            }else{
+                // wynik = 1;
+                ilePaczek = 1;
+            }
+            // System.out.println("Jestem za ostatnim:"+wynik);
+            // System.out.println(wynik);
+            // while(wynik%cookiesInPack!=0){
+            //     wynik++;
+            //     // System.out.println(wynik);
+            // }
+            
+            // int ilePaczek = wynik/cookiesInPack;
+            
+            // System.out.println("Jestem ile Paczek"+ilePaczek);
+            // System.out.println(ilePaczek);
+            results.add(ilePaczek);
+            members.clear();
     }
-}
+    for(Integer list : results){
+        System.out.println(list);
+    }
+    scanner.close();
+}}
